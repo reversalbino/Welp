@@ -1,0 +1,49 @@
+#login-form {
+    height: 15rem;
+    width: 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+label i {
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#login-form input {
+    width: 20rem;
+    height: 2rem;
+    font-size: 16px;
+}
+
+#login-form #login-button {
+    width: 20.35rem;
+    height: 2.3rem;
+    background-color: #d32323;
+    border: 1px solid #d32323;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: white;
+    transition: all .6s;
+}
+
+#login-form #login-button:hover {
+    background-color: #d45959;
+    cursor: pointer;
+}
+
+label {
+    margin-left: 27px;
+}
+
+#intro-text {
+    color: #d32323;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 900;
+}
