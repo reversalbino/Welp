@@ -1,7 +1,35 @@
 #navbar {
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
     justify-content: space-between;
+    background-color: white;
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 0 8px 2px #e6e6e6
+}
+
+#search-icon {
+    font-size: 22px;
+    padding: 5px;
+    color: white;
+}
+
+#search-bar-input {
+    height: 2.5rem;
+    width: 30rem;
+    border: none;
+}
+
+#submit-search-button {
+    height: 2.5rem;
+    background-color: #E00707;
+    border: none;
 }
 
 .navbar-button {
@@ -19,12 +47,19 @@
     text-decoration: underline;
 } */
 
-#log-in-button
-{
+#log-in-button {
     position: relative;
+    margin-right: 10px;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
-#log-in-button:before {
+#log-in-button:hover {
+    text-decoration: underline;
+}
+
+/* #log-in-button:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -40,4 +75,24 @@
 #log-in-button:hover:before {
   visibility: visible;
   transform: scaleX(1);
+} */
+
+#sign-up-button {
+    color: white;
+    background-color: #E00707;
+    border: 2px solid #E00707;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+#sign-up-button:hover {
+    background-color: gray;
+}
+
+#logo {
+    height: 80px;
+}
+
+#navbar li {
+    list-style-type: none;
 }
