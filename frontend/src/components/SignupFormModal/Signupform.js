@@ -90,7 +90,7 @@ function SignupFormPage() {
 
     return (
         <>
-            <p id='intro-text'>Sign up for Whelp</p>
+            <p id='intro-text'>Sign up for Welp</p>
             <form id='signup-form' onSubmit={handleSubmit}>
                 <ul>
                     {errors.map((error, idx) => <li key={idx}>{error}</li>)}

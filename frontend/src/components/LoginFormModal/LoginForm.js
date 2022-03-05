@@ -52,7 +52,7 @@ function LoginForm() {
 
   return (
     loginForm ? <>
-      <p id='intro-text'>Log in to Whelp</p>
+      <p id='intro-text'>Log in to Welp</p>
       <form id='login-form' onSubmit={handleLoginSubmit}>
         <ul>
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
