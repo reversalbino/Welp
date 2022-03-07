@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     border: none;
-    box-shadow: 0 0 8px 2px #e6e6e6
+    box-shadow: 0 0 8px 2px #e6e6e6;
 }
 
 #search-icon {
@@ -86,7 +86,7 @@
 }
 
 #sign-up-button:hover {
-    background-color: gray;
+    background-color: #d45959;
 }
 
 #logo {
@@ -95,4 +95,8 @@
 
 #navbar li {
     list-style-type: none;
+}
+
+#modal-links {
+    padding-right: 60px;
 }

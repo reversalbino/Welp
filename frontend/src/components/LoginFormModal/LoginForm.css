@@ -1,5 +1,5 @@
 #login-form {
-    height: 15rem;
+    height: 18rem;
     width: 30rem;
     display: flex;
     flex-flow: column nowrap;
@@ -16,6 +16,7 @@ label i {
     width: 20rem;
     height: 2rem;
     font-size: 16px;
+    border: 2px solid;
 }
 
 #login-form #login-button {
@@ -37,6 +38,11 @@ label i {
     cursor: pointer;
 }
 
+#login-form #login-button:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+}
+
 label {
     margin-left: 27px;
 }
@@ -46,4 +52,41 @@ label {
     font-size: 22px;
     text-align: center;
     font-weight: 900;
+}
+
+#login-button-and-signup-link {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-sign-up {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#new-to-welp {
+    display: flex;
+}
+
+#new-sign-up-button {
+    color: #0073BB;
+}
+
+#new-sign-up-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#signup-button-and-login-link {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#existing-log-in {
+    display: flex;
+    flex-flow: row nowrap;
 }

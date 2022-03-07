@@ -1,5 +1,5 @@
 #signup-form {
-    height: 24rem;
+    height: 33rem;
     width: 30rem;
     display: flex;
     flex-flow: column nowrap;
@@ -37,6 +37,11 @@ label i {
     cursor: pointer;
 }
 
+#signup-form #signup-button:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+}
+
 label {
     margin-left: 27px;
 }
@@ -50,4 +55,63 @@ label {
 
 #signup-lock-icon {
     padding: 7px;
+}
+
+#log-in-text {
+    color: #0073BB;
+}
+
+#log-in-text:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.error {
+    list-style-type: none;
+    text-align: center;
+    margin-right: 40px;
+    color: #d32323
+}
+
+.signup-password-div {
+    border: 2px solid black;
+    width: 20.2rem;
+    height: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.see-password {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+#see-password:hover {
+    cursor: pointer;
+}
+
+#password, #confirm-password {
+    border: none;
+}
+
+.password {
+    display: flex;
+    flex-flow: row nowrap;
+    border: none;
+}
+
+.not-password {
+    border: 2px solid black;
+}
+
+/* .not-password:focus {
+    border: 2px solid lightskyblue;
+} */
+
+#password:focus, #confirm-password:focus {
+    outline: none;
 }
