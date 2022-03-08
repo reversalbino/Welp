@@ -38,9 +38,9 @@ function Navigation({ isLoaded }){
       </li>
       <div id='search-bar'>
         <form onSubmit={handleSearch} id='search-bar'>
-          <input type='search' 
+          <input type='search'
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)} 
+          onChange={e => setSearchTerm(e.target.value)}
           placeholder='Search...'
           id='search-bar-input'
           />
@@ -48,6 +48,7 @@ function Navigation({ isLoaded }){
         </form>
       </div>
       <div id='not-home-links'>
+        <NavLink to='/business/all'>All Businesses</NavLink>
         {isLoaded && sessionLinks}
       </div>
     </ul>

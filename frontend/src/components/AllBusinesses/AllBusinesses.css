@@ -1,0 +1,18 @@
+#all-businesses {
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    align-items: center;
+    margin-left: 300px;
+}
+
+.single-business {
+    border: 2px solid black;
+    width: 100%;
+    margin: 0 0 20px 0;
+    height: 250px;
+}
+
+#all-business-header {
+    align-self: flex-start;
+}

@@ -63,11 +63,11 @@ module.exports = (sequelize, DataTypes) => {
   User.prototype.validatePassword = function (password) {
     return bcrypt.compareSync(password, this.hashedPassword.toString());
    };
-   
+
   User.getCurrentUserById = async function (id) {
     return await User.scope('currentUser').findByPk(id);
    };
-  
+
   User.login = async function ({ credential, password }) {
     const { Op } = require('sequelize');
     const user = await User.scope('loginUser').findOne({
@@ -86,16 +86,17 @@ module.exports = (sequelize, DataTypes) => {
   User.signup = async function ({ name, username, email, password }) {
     const hashedPassword = bcrypt.hashSync(password);
     const user = await User.create({
-      name, 
+      name,
       username,
       email,
       hashedPassword
     });
     return await User.scope('currentUser').findByPk(user.id);
   };
-  
+
   User.associate = function(models) {
     // associations can be defined here
+    User.hasMany(models.Business, { foreignKey: 'id' })
   };
 
   return User;
