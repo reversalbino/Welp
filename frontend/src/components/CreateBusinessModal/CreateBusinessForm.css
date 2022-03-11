@@ -1,0 +1,58 @@
+#create-business-form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90rem;
+    height: 40rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#business-name-and-description {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+    padding-right: 100px;
+}
+
+#business-address-information {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+    padding-left: 100px;
+}
+
+#vertical-divider {
+    border: 2px solid black;
+    height: 500px;
+}
+
+#entire-create-business-form {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+textarea {
+    height: 200px;
+    width: 300px;
+    font-size: 16px;
+    resize: none;
+}
+
+
+#business-address-information label {
+    padding: 20px;
+}
+
+#business-address-information label input:not(#zip-code) {
+    height: 30px;
+    width: 200px;
+}
+
+#state-and-zip-code {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#zip-code {
+    width: 90px;
+}

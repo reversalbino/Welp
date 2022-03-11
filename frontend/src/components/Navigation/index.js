@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
+import CreateBusinessModal from '../CreateBusinessModal';
 import './Navigation.css';
 import logo from './solo-project-2-logo.png'
 
@@ -14,7 +15,10 @@ function Navigation({ isLoaded }){
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      <ProfileButton user={sessionUser} />
+      <div id='modal-links'>
+        <CreateBusinessModal />
+        <ProfileButton user={sessionUser}/>
+      </div>
     );
   } else {
     sessionLinks = (

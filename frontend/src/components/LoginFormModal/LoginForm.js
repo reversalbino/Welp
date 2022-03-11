@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import './LoginForm.css';
+import * as sessionActions from '../../store/session';
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ function LoginForm() {
   const [validEmail, setValidEmail] = useState(undefined);
 
   useEffect(() => {
-    
+
   }, [loginForm])
 
   const handleLoginSubmit = (e) => {

@@ -13,7 +13,6 @@ module.exports = {
       }], {});
     */
    return queryInterface.bulkInsert('Businesses', [
-      //
     {
       ownerId: 1,
       "address": "Willow Lane",
@@ -69,7 +68,7 @@ module.exports = {
       "title": "Zaamdrill",
       "zipCode": "14117"
     }
-   ])
+   ]);
   },
 
   down: (queryInterface, Sequelize) => {

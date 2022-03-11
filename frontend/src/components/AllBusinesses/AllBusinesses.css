@@ -1,18 +1,73 @@
+#all-businesses-page:not(#all-businesses) {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid red;
+}
+
 #all-businesses {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     width: 30%;
+    height: 80vh;
     align-items: center;
     margin-left: 300px;
+    overflow: scroll;
+    gap: 20px;
 }
 
 .single-business {
     border: 2px solid black;
-    width: 100%;
+    width: 60%;
     margin: 0 0 20px 0;
     height: 250px;
 }
 
 #all-business-header {
     align-self: flex-start;
+}
+
+.single-business-div {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 220px;
+    width: 99%;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+
+.single-business-div-image {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.single-business-text {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px;
+    width: 50%;
+}
+
+.business-image {
+    width: 500px;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    word-wrap: break-word;
+}
+
+.title {
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.description {
+    font-size: 13px;
+}
+
+#single-business {
+    width: 40%;
+    margin: auto;
 }
