@@ -51,6 +51,10 @@ function LoginForm() {
     return setErrors(['Confirm Password field must be the same as the Password field']);
   };
 
+  function userDemo() {
+    dispatch(sessionActions.demo())
+  }
+
   function reset() {
     setEmail('');
     setUsername('');
@@ -188,6 +192,7 @@ function LoginForm() {
           </button>
           <div id='new-sign-up'><p id='new-to-welp'>New to Welp?&nbsp;</p><p id='new-sign-up-button' onClick={() => handleChange()}>Sign up</p></div>
         </div>
+        <button onClick={userDemo}>Demo User</button>
       </form>
     </>
     :

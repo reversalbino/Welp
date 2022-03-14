@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
 import CreateBusinessModal from '../CreateBusinessModal';
+
 import './Navigation.css';
 import logo from './solo-project-2-logo.png'
 
 function Navigation({ isLoaded }){
-  const [searchTerm, setSearchTerm] = useState('');
+  // const [searchTerm, setSearchTerm] = useState('');
   const sessionUser = useSelector(state => state.session.user);
 
   let sessionLinks;
@@ -31,16 +33,16 @@ function Navigation({ isLoaded }){
     );
   }
 
-  function handleSearch(event) {
-    event.preventDefault();
-  }
+  // function handleSearch(event) {
+  //   event.preventDefault();
+  // }
 
   return (
     <ul id='navbar'>
       <li >
         <NavLink exact to="/"><img src={logo} alt={logo} id='logo'/></NavLink>
       </li>
-      <div id='search-bar'>
+      {/* <div id='search-bar'>
         <form onSubmit={handleSearch} id='search-bar'>
           <input type='search'
           value={searchTerm}
@@ -50,9 +52,9 @@ function Navigation({ isLoaded }){
           />
           <button id='submit-search-button' type='submit'><i className="fa fa-search icon" id='search-icon' aria-hidden="true"></i></button>
         </form>
-      </div>
+      </div> */}
       <div id='not-home-links'>
-        <NavLink to='/business/all'>All Businesses</NavLink>
+        <NavLink to='/business/all' id='all-businesses-link'>All Businesses</NavLink>
         {isLoaded && sessionLinks}
       </div>
     </ul>

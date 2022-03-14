@@ -2,7 +2,9 @@ import { useHistory, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 
 import EditBusinessModal from '../EditBusinessModal';
+import Reviews from '../Reviews';
 import * as businessActions from '../../store/business';
+import './singleBusiness.css';
 
 function SingleBusiness({ businesses }) {
   const dispatch = useDispatch();
@@ -24,13 +26,14 @@ function SingleBusiness({ businesses }) {
 
   return (
     id === 'all' ?
-    <p id='click-to-see-business'>Click on a business to see it</p>
+    <p id='click-to-see-business'>{`<-- Click on a business to see it`}</p>
     :
     <div id='single-business-page'>
       <p id='single-business-title'>{businessSelected.title}</p>
-      {businessSelected.ownerId === user.id &&
+      <img id='main-business-image' src={businessSelected.Pictures[0].url} alt={businessSelected.title} />
+      {(user && businessSelected.ownerId === user.id) &&
         <div id='edit-and-delete-buttons'>
-          <button onClick={deleteBusiness} id='log-in-button'>Delete This Business</button>
+          <button onClick={deleteBusiness} id='log-in-button'>Delete Business</button>
           <EditBusinessModal id={id} currentValues={curr}/>
         </div>
       }
@@ -39,10 +42,16 @@ function SingleBusiness({ businesses }) {
       <a
       href={`https://www.google.com/maps/search/${businessSelected.address.split(' ').join('+')},+${businessSelected.city.split(' ').join('+')},+${businessSelected.state.split(' ').join('+')},+${businessSelected.zipCode}`}
       target='_blank'
+      rel="noreferrer"
+      className='address-link'
       >
         {businessSelected.address}, {businessSelected.city}, {businessSelected.state}, {businessSelected.zipCode}
       </a>
       <p id='single-business-description'>{businessSelected.description}</p>
+
+      <hr />
+
+      <Reviews id={id} />
     </div>
   );
 }

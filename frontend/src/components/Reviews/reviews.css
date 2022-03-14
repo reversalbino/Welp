@@ -1,0 +1,17 @@
+.single-review-div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.single-review-text {
+    padding:  0 20px;
+}
+
+#reviews {
+    text-align: center;
+}
+
+.single-review-div {
+    margin-left: 350px;
+    padding: 30px;
+}

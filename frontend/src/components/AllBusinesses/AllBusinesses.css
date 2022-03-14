@@ -1,7 +1,6 @@
 #all-businesses-page:not(#all-businesses) {
     display: flex;
     flex-flow: row wrap;
-    border: 2px solid red;
 }
 
 #all-businesses {
@@ -11,7 +10,7 @@
     height: 80vh;
     align-items: center;
     margin-left: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
     gap: 20px;
 }
 

@@ -91,6 +91,7 @@
 
 #logo {
     height: 80px;
+    margin-left: 400px;
 }
 
 #navbar li {
@@ -99,4 +100,8 @@
 
 #modal-links {
     padding-right: 60px;
+}
+
+#all-businesses-link {
+    font-size: 16px;
 }

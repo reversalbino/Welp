@@ -1,0 +1,47 @@
+#click-to-see-business {
+    margin: auto;
+    font-size: 22px;
+}
+
+#single-business-page {
+    width: 50%;
+    height: 700px;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-y: scroll;
+    justify-content: center;
+    gap: 5px 10px;
+    border: 2px solid black;
+}
+
+#single-business-title {
+    font-size: 22px;
+    text-align: center
+}
+
+#edit-and-delete-buttons {
+    text-align: center;
+}
+
+.address-link {
+    text-align: center;
+}
+
+.address-link:hover {
+    cursor: pointer;
+}
+
+.address-link:visited {
+    color: blue;
+}
+
+#single-business-description {
+    text-align: center;
+    font-size: 16px;
+}
+
+#main-business-image {
+    width: 750px;
+    margin-left: calc(100% - 825px);
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import * as businessActions from '../../store/business';
 
@@ -7,16 +8,22 @@ import './CreateBusinessForm.css';
 
 function CreateBusinessForm({ hideForm }) {
   const dispatch = useDispatch();
+  const history = useHistory();
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [zipCode, setZipCode] = useState('');
-  const [latitude, setLatitude] = useState();
-  const [longitude, setLongitude] = useState();
-  // const [phoneNumber, setPhoneNumber] = useState('');
-  const [createBusinessButtonDisabled, setCreateBusinessButtonDisabled] = useState(false);
+  const [createBusinessButtonDisabled, setCreateBusinessButtonDisabled] = useState(true);
+
+  useEffect(() => {
+    console.log('change')
+    let zipCodeOnlyContainsNumbers = /^\d+$/.test(zipCode);
+    setCreateBusinessButtonDisabled(!(title.length > 0 && description.length > 0 && address.length > 0 && city.length > 0 && state.length > 0
+      && zipCode.length >= 5 && zipCodeOnlyContainsNumbers));
+  }, [title, description, address, city, state, zipCode])
 
   const user = useSelector(state => state.session.user);
 
@@ -33,15 +40,13 @@ function CreateBusinessForm({ hideForm }) {
     }
     dispatch(businessActions.createBusiness(business));
     hideForm();
+    history.push('/business/all');
   }
 
   return (
     <>
       <p id='intro-text'>Create a business</p>
       <form id='create-business-form' onSubmit={handleCreateBusinessSubmit}>
-        {/* <ul>
-          {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-        </ul> */}
         <div id='entire-create-business-form'>
           <div id='business-name-and-description'>
             <p>What is the name of your business?</p>
@@ -114,7 +119,7 @@ function CreateBusinessForm({ hideForm }) {
         <div id='button'>
           <button type="submit"
             disabled={createBusinessButtonDisabled}
-            id='login-button'
+            id='create-button'
           >
           Create
           </button>

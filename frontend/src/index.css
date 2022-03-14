@@ -2,3 +2,45 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+#homepage {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 54vw;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://static.onecms.io/wp-content/uploads/sites/19/2005/06/22/429048911_6152425885001_6152427053001-vs.jpg&w=1280&h=720&q=90&c=cc');
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#homepage-questions {
+    font-size: 30px;
+    text-align: center;
+}
+
+#homepage-answer {
+    font-size: 30px;
+    text-align: center;
+}
+
+#homepage p {
+    color: white;
+}
+
+#see-all-businesses-homepage {
+    width: 200px;
+    font-size: 20px;
+    background-color:#E00707;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#see-all-businesses-homepage:visited {
+    color: white;
+    text-decoration: none;
+}

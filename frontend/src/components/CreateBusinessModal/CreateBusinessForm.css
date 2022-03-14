@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: column nowrap;
     width: 90rem;
-    height: 40rem;
+    height: 50rem;
     justify-content: center;
     align-items: center;
 }
@@ -43,7 +43,7 @@ textarea {
     padding: 20px;
 }
 
-#business-address-information label input:not(#zip-code) {
+#business-address-information label input {
     height: 30px;
     width: 200px;
 }
@@ -55,4 +55,28 @@ textarea {
 
 #zip-code {
     width: 90px;
+}
+
+#create-button {
+    width: 20.35rem;
+    height: 2.3rem;
+    background-color: #d32323;
+    border: 1px solid #d32323;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: white;
+    transition: all .6s;
+}
+
+#create-button:hover {
+    background-color: #d45959;
+    cursor: pointer;
+}
+
+#create-button:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
 }
