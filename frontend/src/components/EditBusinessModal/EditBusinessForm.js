@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import './EditBusinessForm.css';
@@ -15,6 +15,12 @@ function EditBusinessForm({ id, hideForm, currentValues }) {
   const [newState, setNewState] = useState(currentValues.state);
   const [newZipCode, setNewZipCode] = useState(currentValues.zipCode);
   const [createBusinessButtonDisabled, setCreateBusinessButtonDisabled] = useState(false);
+
+  useEffect(() => {
+    let zipCodeOnlyContainsNumbers = /^\d+$/.test(newZipCode);
+    setCreateBusinessButtonDisabled(!(newTitle.length > 0 && newDescription.length > 0 && newAddress.length > 0 && newCity.length > 0
+      && newState.length > 0 && newZipCode.length >= 5 && zipCodeOnlyContainsNumbers));
+  }, [newTitle, newDescription, newAddress, newCity, newState, newZipCode])
 
   function handleEditBusinessSubmit(e) {
     e.preventDefault();
@@ -110,9 +116,9 @@ function EditBusinessForm({ id, hideForm, currentValues }) {
         <div id='button'>
           <button type="submit"
             disabled={createBusinessButtonDisabled}
-            id='login-button'
+            id='edit-business-button'
           >
-          Update
+            Update
           </button>
         </div>
       </form>

@@ -1,0 +1,23 @@
+#edit-business-button {
+    width: 20.35rem;
+    height: 2.3rem;
+    background-color: #d32323;
+    border: 1px solid #d32323;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: white;
+    transition: all .6s;
+}
+
+#edit-business-button:hover {
+    background-color: #d45959;
+    cursor: pointer;
+}
+
+#edit-business-button:disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+}
