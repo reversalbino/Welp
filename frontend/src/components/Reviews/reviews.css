@@ -1,6 +1,6 @@
 .single-review-div {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 .single-review-text {
@@ -9,6 +9,8 @@
 
 #reviews {
     text-align: center;
+    height: 300px;
+    overflow-y: scroll;
 }
 
 .single-review-div {

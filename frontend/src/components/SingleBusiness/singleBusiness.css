@@ -15,9 +15,22 @@
     border: 2px solid black;
 }
 
+#business-page-without-reviews {
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    overflow-y: scroll;
+}
+
 #single-business-title {
     font-size: 22px;
     text-align: center
+}
+
+#business-page-without-reviews hr {
+    height: 3px;
+    width: 100%;
+    background-color: black;
 }
 
 #edit-and-delete-buttons {
@@ -43,5 +56,5 @@
 
 #main-business-image {
     width: 750px;
-    margin-left: calc(100% - 825px);
+    margin: auto;
 }
